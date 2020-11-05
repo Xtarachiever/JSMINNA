@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="../css/Task8.css" rel="stylesheet"/>
+</head>
+<body>
+    <div>
+        <div class="all">
+            <div id="ahh"></div>
+            <form id="form" action="index.html">
+                    <h4>Sign Up</h4><br/>
+                    <p>Please fill in this form to create an account</p>
+                <div class="name"  id="names">
+                    <input type="text" id="firstname" placeholder="First Name" onblur="return verifyName()" class="firstname" name="firstname" required/>
+                    <input type="text" id="lastname" placeholder="Last Name" onblur="return verifyName()" name="lastname" required/>
+                </div>
+                <div class="error" id="errorName"></div>
+                <div class="email">
+                    <input type="email" onblur="return verifyEmail()" id="email" placeholder="Email" name="email" required/>
+                </div>
+                <div class="error" id="errorEmail"></div>
+                <div class="password" >
+                    <input type="password" id="password" onblur="return veriFy()"  placeholder="Password" name="password" required/>
+                </div>
+                <div class="error" id="error"></div>
+                <div class="confirm">
+                    <input type="password" id="confirm" onblur="return conFirm()"  placeholder="Confirm Password" name="password" required/>
+                </div>
+                <div class="error" id="errorConfirm"></div>
+                <div class="checkbox">
+                    <label>
+                        <input id="check" type="checkbox"/> I accept the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="sign-up" id="sign-up">Sign Up</button>
+            </form>
+            <p id="login">Already have an account? <a href="task8a.html">Login Here</a></p>
+            <div class="loader" id="loader"></div> 
+        </div>
+    </div>
+    <script src="../js/Task8.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>
