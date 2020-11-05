@@ -1,7 +1,9 @@
+@import url('https://fonts.google.com/specimen/Public+Sans');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-family);
 }
 body{
     overflow-x: hidden;
@@ -28,6 +30,9 @@ ul{
     top: 20px;
     margin-top: 10px;
     margin-left: 25px;
+}
+#section2 h1{
+    padding-bottom: 30px;
 }
 /* ::before{
     box-sizing: inherit;
@@ -647,6 +652,12 @@ ul{
         border-radius: 30px;
         font-size: 25px;
     }
+    #section2 #articles #article4 img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
     #section2 #articles #article4 p{
         width: 600px;
         font-size: 25px;
@@ -847,8 +858,27 @@ ul{
     }
     #section #easy-sections div p{
         width: 350px;
+        font-size: 16px;
     }
-    #section2 #articles  p{
+
+    #section2 #articles #article1  p{
+        display: flex;
+        width: 240px;
+        overflow-x: hidden;
+        font-size: 14px;
+    }
+    #section2 #articles #article3  a,#section2 #articles #article1  a, #section2 #articles #article4  a, #section2 #articles #article2  a{
+        font-size: 16px;
+        justify-content: space-around;
+        text-align: center;
+    }
+    #section2 #articles #article3  p{
+        display: flex;
+        width: 240px;
+        overflow-x: hidden;
+        font-size: 14px;
+    }
+    #section2 #articles #article2  p{
         display: flex;
         width: 240px;
         overflow-x: hidden;
