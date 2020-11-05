@@ -29,6 +29,9 @@ ul{
     margin-top: 10px;
     margin-left: 25px;
 }
+#section2 h1{
+    padding-bottom: 30px;
+}
 /* ::before{
     box-sizing: inherit;
 } */
@@ -847,8 +850,27 @@ ul{
     }
     #section #easy-sections div p{
         width: 350px;
+        font-size: 16px;
     }
-    #section2 #articles  p{
+
+    #section2 #articles #article1  p{
+        display: flex;
+        width: 240px;
+        overflow-x: hidden;
+        font-size: 14px;
+    }
+    #section2 #articles #article3  a,#section2 #articles #article1  a, #section2 #articles #article4  a, #section2 #articles #article2  a{
+        font-size: 16px;
+        justify-content: space-around;
+        text-align: center;
+    }
+    #section2 #articles #article3  p{
+        display: flex;
+        width: 240px;
+        overflow-x: hidden;
+        font-size: 14px;
+    }
+    #section2 #articles #article2  p{
         display: flex;
         width: 240px;
         overflow-x: hidden;
