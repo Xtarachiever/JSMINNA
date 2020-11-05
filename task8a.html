@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="Task8a.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <form id="form">
+        <div id="all"></div>
+        <div class="email">
+            <input type="email" oninput="return veriFy()" id="email" placeholder="Email" name="email" required/>
+        </div>
+        <div class="error" id="errorEmail"></div>
+        <div class="password" >
+            <input type="password"  oninput="return veriFy()" id="password" placeholder="Password" name="password" required/>
+        </div>
+        <div class="error" id="errorPassword"></div>
+        <div id="checkB">
+            <input type="checkbox" id="checker" class="check" name="check"/>
+            <label for="check">Remember Me</label>
+        </div>
+        <button type="submit" id="login">Login</button>
+    </form>
+    <script src="Task8a.js"></script>
+</body>
+</html>

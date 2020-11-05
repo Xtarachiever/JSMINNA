@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:blue;
+}
+form{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+    height:500px;
+    border-radius:10px;
+}
+form div{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.name input{
+    margin-right:10px;
+    height:30px;
+    color:gray;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.email input, .password input, .confirm input{
+    position: relative;
+    width:100%;
+    height:30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 9px 20px;
+}
+a{
+    text-decoration: none;
+}
+.checkbox{
+    position: relative;
+    margin-top:30px;
+    transform: translateX(-16%);
+}
+.sign-up{
+    background-color: rgb(8, 83, 126);
+    margin-top:25px;
+    padding:9px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#login{
+    display:flex;
+    justify-content:center;
+    color: white;
+    top:50%;
+    transform:translateY(100%)
+}
+#login a{
+    color:white;
+    text-decoration: underline;
+}
+#sign-up:disabled{
+    cursor: not-allowed;
+}
+.error{
+    color: red;
+}
+@media(max-width:760px){
+    form{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background-color: white;
+        padding: 20px 20px 20px 20px;
+        height:500px;
+        border-radius:10px;
+        width: 300px;
+    }
+    .name input{
+        margin-right:10px;
+        height:30px;
+        color:gray;
+        padding: 12px 6px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        width: 150px;
+    }
+    .checkbox{
+        position: relative;
+        margin-top:30px;
+        transform: translateX(-2%);
+    }
+    .sign-up:disabled{
+        cursor: pointer;
+    }
+}
