@@ -410,6 +410,7 @@ ul{
         justify-content:space-around;
         overflow-y: hidden;
         border-radius: 10px solid var(--bright-cyan);
+       filter: drop-shadow(9px 8px 18px gray);
     }
     .lists{
         position: relative;
