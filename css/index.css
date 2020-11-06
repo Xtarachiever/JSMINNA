@@ -19,7 +19,7 @@ body{
     --light-grayish-blue: hsl(220, 16%, 96%);
     --very-light-gray: hsl(0, 0%, 98%);
     --white: hsl(0, 0%, 100%);
-    --font-family:'Public-sans',sans-serif
+    --font-family:'Public Sans',sans-serif;
 }
 ul{
     list-style: none;
