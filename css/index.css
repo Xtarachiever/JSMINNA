@@ -168,23 +168,6 @@ ul{
         text-transform: uppercase;
         -moz-box-align: center;
     }
-    #pro span{
-        margin-left: 0.5rem;
-        font-style: initial;
-    }
-    .pro{
-        background-color: rgb(62, 84, 163);
-        color: white;
-        padding: 4px 8px 4px 10px;
-        font-size: 12px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: inline-flex;
-        justify-content: center;
-        -moz-box-align: center;
-        -moz-box-pack: center;
-    }
     #challenges a{
         align-items: center;
         color: black;
@@ -405,25 +388,38 @@ ul{
     #request{
         display: none;
     }
+    #all-header #lists{
+        margin-left: 260px;
+        height: 500px;
+    }
+    #all-header .tops{
+        background-color: var(--white);
+    }
+    #all-header #lists ul li{
+        border-bottom: none;
+        text-align: center;
+        padding:20px 10px 20px 10px;
+    }
+    #all-header #lists ul #pro a{
+        position: relative;
+        left: 220px;
+        text-align: center;
+    }
     #all-header{
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgb(219, 229, 230);
         width: 100%;
         position: fixed;
-        background-color: white;
-        overflow: hidden;
-    }
-    #all-header #lists{
-        width: 100%;
+        background-color: transparent;
     }
     #all-header #lists ul{
-        position: relative;
-        display: flex;
         flex-direction: column;
-        top: 35px;
-        background-color: rgb(245, 245, 245);
-        z-index: 10;
-        width: 100%;
+        background-color: var(--white);
+        margin-top: 20px;
+        display: flex;
+        max-width: 1000px;
+        width: 70%;
+        justify-content:space-around;
+        overflow-y: hidden;
+        border-radius: 10px solid var(--bright-cyan);
     }
     .lists{
         position: relative;
@@ -476,10 +472,6 @@ ul{
     ul{
         list-style: none;
     }
-    #github{
-        padding: 1.5rem 0px;
-        border-bottom: 1px solid rgb(219, 229, 230);
-    }
     #github a{
         margin-left: 25px;
         text-decoration: none;
@@ -488,9 +480,6 @@ ul{
         font-weight: 700;
         line-height: 1.5;
     }
-    #pro{
-        border-bottom: 1px solid rgb(219, 229, 230);
-    }
     #pro a{
         display: flex;
         align-items: center;
@@ -498,25 +487,9 @@ ul{
         text-decoration: none;
         color: black;
         margin-left: 25px;
-        padding: 1.5rem 0px;
         font-size: 18px;
         text-transform: uppercase;
         font-weight: 700;
-    }
-    .pro{
-        display: flex;
-        margin-left: 0.5rem;
-        font-style: initial;
-        background-color: rgb(62, 84, 163);
-        color: white;
-        font-size: 13px;
-        line-height: 1;
-        padding: 4px 8px 4px 11px;
-        letter-spacing: 2px;
-    }
-    #challenges{
-        padding: 1.5rem 0px;
-        border-bottom: 1px solid rgb(219, 229, 230);
     }
     #challenges a{
         text-decoration: none;
@@ -525,20 +498,12 @@ ul{
         font-weight: 700;
         font-size: 18px;
     }
-    #solutions{
-        padding: 1.5rem 0px;
-        border-bottom: 1px solid rgb(219, 229, 230);
-    }
     #solutions a{
         text-decoration: none;
         color: #000;
         margin-left: 25px;
         font-weight: 700;
         font-size: 18px;
-    }
-    #resources{
-        padding: 1.5rem 0px;
-        border-bottom: 1px solid rgb(219, 229, 230);
     }
     #resources a{
         text-decoration: none;
@@ -836,6 +801,57 @@ ul{
     #section2 #articles header #author,#unique{
         padding-left: 20px;
     }
+    #all-header #lists ul #pro a{
+        position: relative;
+        left: 120px;
+        text-align: center;
+    }
+    #all-header{
+        width: 100%;
+        position: fixed;
+        background-color: transparent;
+    }
+    #all-header #lists ul{
+        flex-direction: column;
+        background-color: var(--white);
+        margin-top: 20px;
+        display: flex;
+        max-width: 1000px;
+        width: 70%;
+        justify-content:space-around;
+        overflow-y: hidden;
+        border-radius: 10px;
+    }
+}
+@media(max-width:560px){
+    #all-header .tops{
+        background-color: var(--white);
+    }
+    #all-header #lists ul #pro a{
+        position: relative;
+        left: 95px;
+        text-align: center;
+    }
+    #all-header{
+        width: 100%;
+        position: fixed;
+        background-color: transparent;
+    }
+    #all-header #lists ul{
+        flex-direction: column;
+        background-color: var(--white);
+        margin-top: 20px;
+        display: flex;
+        max-width: 700px;
+        width: 70%;
+        justify-content:space-around;
+        overflow-y: hidden;
+        border-radius: 10px;
+    }
+    #all-header #lists{
+        margin-left: 100px;
+        height: 500px;
+    }
 }
 @media(max-width:420px){
     #header #desktop .intro-img{
@@ -912,10 +928,41 @@ ul{
     }
     #footer #coder p{
         color: var(--white);
-
+    }
+    #all-header .tops{
+        background-color: var(--white);
+    }
+    #all-header #lists ul #pro a{
+        position: relative;
+        left: 50px;
+        text-align: center;
+    }
+    #all-header{
+        width: 100%;
+        position: fixed;
+        background-color: transparent;
+    }
+    #all-header #lists ul{
+        flex-direction: column;
+        background-color: var(--white);
+        margin-top: 20px;
+        display: flex;
+        max-width: 700px;
+        width: 70%;
+        justify-content:space-around;
+        overflow-y: hidden;
+        border-radius: 10px;
+    }
+    #all-header #lists{
+        margin-left: 100px;
+        height: 350px;
+    }
+    #all-header #lists ul li a{
+        font-size: 15px;
+        padding-top: 4px;
     }
 }
-@media(max-width:300px){
+@media(max-width:360px){
     #header #desktop .intro-text p{
         padding-bottom: 30px;
         width: 240px;
@@ -928,5 +975,66 @@ ul{
     }
     #section2 #articles #article4  p{
         width: 180px;
+    }
+    #header #desktop .intro-text h1{
+        width: 230px;
+        font-size: 25px;
+    }
+    #all-header{
+        background-color: transparent;
+        border-bottom: none;
+    }
+    #all-header .tops{
+        background-color: var(--white);
+    }
+    #all-header #lists{
+        justify-items: center;
+        margin-left: 80px;
+        height: 300px;
+    }
+    #all-header #lists ul{
+        background-color: var(--white);
+        margin-top: 20px;
+        display: flex;
+        max-width: 500px;
+        width: 70%;
+        justify-content:space-around;
+        overflow-y: hidden;
+        border-radius: 10px;
+    }
+    #all-header #lists ul li{
+        border-bottom: none;
+        text-align: center;
+        padding:10px;
+    }
+    #all-header #lists ul #pro a{
+        position: relative;
+        left: 45px;
+        text-align: center;
+    }
+    #all-header #lists ul li a{
+        font-size: 14px;
+        padding-top: 2px;
+    }
+}
+@media(max-width:280px){
+    #all-header #lists ul #pro a{
+        position: relative;
+        left: 38px;
+        text-align: center;
+    }
+    #all-header #lists{
+        justify-items: center;
+        margin-left: 60px;
+        height: 200px;
+    }
+    #all-header #lists ul li{
+        border-bottom: none;
+        text-align: center;
+        padding:4px;
+    }
+    #all-header #lists ul li a{
+        font-size: 10px;
+        padding-top: 5px;
     }
 }
