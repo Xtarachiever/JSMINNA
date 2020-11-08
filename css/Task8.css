@@ -15,7 +15,6 @@ form{
     height:500px;
     border-radius:10px;
 }
-
 h4{
     font-size: 30px;
     color: rgb(16, 164, 223);
@@ -54,9 +53,9 @@ a{
 .checkbox{
     position: relative;
     margin-top:10px;
-    transform: translateX(-12%);
+    transform: translateX(-10%);
 }
-.sign-up {
+.sign-up{
     background-color: blue;
     margin-top:25px;
     padding:9px 12px;
@@ -66,7 +65,7 @@ a{
 #login{
     display:flex;
     justify-content:center;
-    color: rgb(97, 96, 96);
+    color: white;
     top:50%;
     transform:translateY(100%)
 }
@@ -78,13 +77,6 @@ a{
     background-color: rgb(170, 168, 168);
     cursor: not-allowed;
 }
-/* #sign-up a:disabled{
-    cursor: not-allowed;
-    color: grey;
-}
-#sign-up a{
-    color: white;
-} */
 .error{
     color: red;
 }
@@ -105,17 +97,6 @@ a{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  .active{
-      font-size: 0;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border-left: transparent;
-      animation: rotate 1.4s ease 0.5s infinite;
-      background-color: white;
-      color: black;
-  }
-
 @media(max-width:760px){
     form{
         position: absolute;
@@ -124,14 +105,14 @@ a{
         transform: translate(-50%,-50%);
         background-color: white;
         padding: 20px 20px 20px 20px;
-        height:500px;
+        height:550px;
         border-radius:10px;
         width: 300px;
     }
     .name input{
         margin-right:10px;
         height:30px;
-        color:rgb(97, 92, 92);
+        color:gray;
         padding: 12px 6px;
         display: inline-block;
         border: 1px solid #ccc;
@@ -141,9 +122,17 @@ a{
     }
     .checkbox{
         position: relative;
-        margin-top:30px;
+        margin-top:10px;
         transform: translateX(-2%);
     }
+    .email input, .password input, .confirm input{
+    position: relative;
+    width:100%;
+    height:20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 12px;
+}
     .sign-up:disabled{
         cursor: pointer;
     }
@@ -159,33 +148,9 @@ a{
         left: 25%;
         transform: translate(-50%,-50%);
         display: none;
-      }
+    }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 }
-/* @media(max-width:1024px){
-    .loader {
-        position: absolute;
-        border: 6px solid #f3f3f3;
-        border-top: 6px solid #3498db; 
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        animation: spin 2s linear infinite;
-        top:555px;
-        left: 40%;
-        transform: translate(-50%,-50%);
-      }
-}
-@media(max-width:420px){
-    .loader {
-        position: absolute;
-        border: 6px solid #f3f3f3;
-        border-top: 6px solid #3498db; 
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        animation: spin 2s linear infinite;
-        top:555px;
-        left: 40%;
-        transform: translate(-50%,-50%);
-      }
-} */
