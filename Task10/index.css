@@ -21,6 +21,7 @@ img{
     width: 100%;
 }
 .country-wrapper .country-flag{
+    width: 100%;
     height: 10rem;
 }
 .country-wrapper{
@@ -31,22 +32,23 @@ img{
     align-items: center;
     align-content: center;
     overflow-x: hidden;
+    margin-top: 4rem;
 }
 .country-information{
     background-color: rgb(66, 67, 80);
-    box-shadow: 5px 6px 6px  rgb(24, 23, 23);
+    box-shadow: 3px 3px 4px  rgb(39, 39, 39);
     width: 18rem;
     display: flex;
     flex-direction: column;
     align-self: center;
     margin: 2rem 0;
-    height: 26rem;
+    height: 27rem;
     overflow-y: hidden;
 }
 .country-information h4{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: white;
-    padding-bottom: .6rem;
+    padding-bottom: .4rem;
 }
 .country-information p{
     font-size: 1.2rem;
@@ -54,7 +56,7 @@ img{
 }
 .country-information .details{
     padding: 2rem;
-    margin-top: 1.7rem;
+    margin-top:3.6rem;
     color: rgb(235, 215, 215);
 }
 .input{
@@ -71,6 +73,9 @@ input,select{
     box-shadow: 3px 4px 10px rgb(48, 35, 35);
     border: none;
     outline: none;
+    position: relative;
+    top: 7rem;
+    z-index: 1;
 }
 select{
     padding-left: 1.3rem;
@@ -87,6 +92,9 @@ nav{
     margin-bottom: 2rem;
     align-items: center;
     font-size: 1.6rem;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }
 nav i{
     cursor: pointer;
@@ -170,7 +178,7 @@ nav h3{
         right: -35px;
     }
     .country-information p{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     input,select{
         font-size: 1.5rem;
