@@ -41,9 +41,9 @@ img{
     display: flex;
     flex-direction: column;
     align-self: center;
-    margin: 2rem 0;
     height: 27rem;
     overflow-y: hidden;
+    margin-
 }
 .country-information h4{
     font-size: 1.5rem;
@@ -161,8 +161,9 @@ nav h3{
         justify-content: center;
         align-items: center;
     }
-    .country-information{
+     .country-information{
         margin: 1rem;
+        margin-bottom: 0;
     }
     input,select{
         width: 20rem;
