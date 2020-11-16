@@ -127,6 +127,21 @@ nav h3{
     color: white;
     font-size: 1.8rem;
 }
+@media(max-width:380px){
+    nav{
+        font-size: 1rem;
+    }
+    nav h3{
+        font-size: 1.6rem;
+    }
+    nav i{
+        position: relative;
+        right: -35px;
+    }
+    .country-wrapper{
+        margin-top: 0.5rem;
+    }
+}
 @media(min-width:760px){
     .country-wrapper{
         display: flex;
@@ -142,10 +157,10 @@ nav h3{
         width: 20rem;
     }
     nav{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     nav h3{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     nav i{
         position: relative;
