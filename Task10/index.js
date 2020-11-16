@@ -4,6 +4,7 @@ const navBar=document.querySelector('nav')
 const input=document.querySelector('input');
 const cards=document.querySelector('.country-information')
 const filter=document.querySelector('.region')
+
 const allFunctions=()=>{
     const toGgle=()=>{
         lightToggle.addEventListener('click',()=>{
@@ -17,8 +18,6 @@ const allFunctions=()=>{
             }
         })
     }
-    const EmptyProperties = (propertyValue) =>
-    propertyValue ? propertyValue : 'Not set';
     console.log(lightToggle.innerText)
     toGgle();
     const addCommas=(numberCount)=>{
@@ -41,6 +40,15 @@ const allFunctions=()=>{
         }
         return numberCount;
     }
+    //if the data isn't giving set it to Not set
+    const dataUnset=(propertyUnset)=>{
+        if(propertyUnset!==""){
+           return propertyUnset
+        }
+        else{
+           return 'Not set'
+        }
+    }
     const countriesContainer = document.getElementById('countries');
     const generateLists=({name,capital,population,region,demonym,flag})=>{
         const country_info=document.createElement('section');
@@ -51,46 +59,48 @@ const allFunctions=()=>{
                     <img src=${flag} alt="${demonym} flag"/>
                 </div>
                 <div class="details">
-                    <h4 class="name">${EmptyProperties(name)}</h4>
-                    <p class="population">Population: ${EmptyProperties(addCommas(population))}</p>
-                    <p class="region">Region: ${EmptyProperties(region)}</p>
-                    <p class="capital">Capital: ${EmptyProperties(capital)}</p>
+                    <h4 class="name">${name}</h4>
+                    <p class="population">Population: ${dataUnset(addCommas(population))}</p>
+                    <p class="region">Region: ${dataUnset(region)}</p>
+                    <p class="capital">Capital: ${dataUnset(capital)}</p>
                 </div>
             </div>
         `;
         countriesContainer.appendChild(country_info);
     }
-    const regionSelectElement=document.getElementById('regions');
-    const generateRegionTemplate=(region)=>{
+
+    //RegionSelector and Filtering based on picks
+    const regionPickList=document.getElementById('regions');
+    const regionListHolder=(region)=>{
         const option=document.createElement('option');
+        option.classList.add('input')
         option.value=region;
         option.innerText=region;
-        option.classList.add('input');
-        regionSelectElement.appendChild(option);
+        regionPickList.appendChild(option);
     }
-    const generateRegionOptions=(regionList)=>{
-        for(const region of regionList){
-            generateRegionTemplate(region);
+    const regionTemplate=(regionSort)=>{
+        for(const region of regionSort){
+            regionListHolder(region)
         }
-        // console.log(regionList)
     }
-    const getCountriesRegions=(countriesList)=>{
-        const countriesRegion=countriesList.map(({region})=>(EmptyProperties(region)));
-        const uniquecountriesRegion=Array.from(new Set(countriesRegion))
-            return uniquecountriesRegion.sort();
+    const regionSorter=(countriesList)=>{
+        const regionSorterTemplate=countriesList.map(({region})=>dataUnset(region))
+        const uniqueRegionPicker=Array.from(new Set(regionSorterTemplate));
+        return uniqueRegionPicker.sort();
     }
-    const filterCountriesByRegion=(countriesList,functions)=>{
-        const filteredCountriesByRegion=countriesList.filter(({region})=>EmptyProperties(region)===functions());
-        generateCountriesList(filteredCountriesByRegion)
-    };
-    regionSelectElement.addEventListener('change', ({ target }) => {
-        if (target.value === 'all') {
-            generateCountriesList(countriesData);
-        } else {
-            filterCountriesByRegion(countriesData, () => target.value);
+    //Filtering based on the pick of the users
+    const filteringRegions=(countriesList,eachCountryList)=>{
+        const filteredRegion=countriesList.filter((({region})=>dataUnset(region)===eachCountryList));
+        generateCountriesList(filteredRegion)
+    }
+    regionPickList.addEventListener('change',(event)=>{
+        if((event.target.value)==="all"){
+          generateCountriesList(countriesData)
         }
-        // searchCountryInput.value = '';
-    });
+        else{
+            filteringRegions(countriesData,event.target.value)
+        }
+    })
     const generateCountriesList=(countriesList)=>{
         countriesContainer.innerHTML='';
         for(const country of countriesList){
@@ -120,12 +130,11 @@ const allFunctions=()=>{
             const response=await fetch("https://restcountries.eu/rest/v2/all");
             countriesData= await response.json();
             generateCountriesList (countriesData);
-            generateRegionOptions(getCountriesRegions(countriesData));
+            regionTemplate(regionSorter(countriesData));
         }
         catch{
             alert("Something went wrong, please try again later")
         }
-        // console.log(countriesData)
     }
     fetchCountriesData();
 }
