@@ -89,7 +89,6 @@ const allFunctions=()=>{
         } else {
             filterCountriesByRegion(countriesData, () => target.value);
         }
-        // searchCountryInput.value = '';
     });
     const generateCountriesList=(countriesList)=>{
         countriesContainer.innerHTML='';
