@@ -31,12 +31,11 @@ img{
     align-items: center;
     align-content: center;
     overflow-x: hidden;
-    padding: 0 5px;
 }
 .country-information{
     background-color: rgb(66, 67, 80);
-    box-shadow: 5px 10px 10px  rgb(19, 14, 14);
-    width: 20rem;
+    box-shadow: 5px 6px 6px  rgb(24, 23, 23);
+    width: 18rem;
     display: flex;
     flex-direction: column;
     align-self: center;
