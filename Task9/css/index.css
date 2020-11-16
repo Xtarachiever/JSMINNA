@@ -1,11 +1,12 @@
+@import url('https://fonts.google.com/specimen/Public+Sans');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-family);
 }
 body{
     overflow-x: hidden;
-    
 }
 :root{
     --dark-blue: hsl(233, 26%, 24%);
@@ -17,7 +18,10 @@ body{
     --light-grayish-blue: hsl(220, 16%, 96%);
     --very-light-gray: hsl(0, 0%, 98%);
     --white: hsl(0, 0%, 100%);
-    --font-family:'Public-sans',sans-serif
+    --font-family:'Public Sans',sans-serif;
+    --font-weight-medium:400;
+    --font-weight-small:300;
+    --font-weight-large:700;
 }
 ul{
     list-style: none;
@@ -29,9 +33,25 @@ ul{
     margin-top: 10px;
     margin-left: 25px;
 }
-/* ::before{
-    box-sizing: inherit;
-} */
+#section2 h1{
+    font-weight: var(--font-weight-large);
+    text-align: center;
+    padding-bottom: 30px;
+}
+#section #easy-sections #open_api span{
+    border-bottom: dotted;
+}
+#section2 #articles p{
+    color: var(--grayish-blue);
+}
+#section2 #articles a{
+    color: var(--dark-blue);
+    font-weight: var(--font-weight-large);
+}
+#footer #coder{
+    display: flex;
+    justify-content: center;
+}
 #section2 #articles header p{
     color: var(--grayish-blue);
     font-size: 13px;
@@ -67,6 +87,16 @@ ul{
     border-bottom: 2px solid var(--lime-green);
     transition: all 0.5ms ease-out;
 }
+#footer #coder{
+    padding-bottom: 40px;
+}
+#footer #coder a{
+    color: rgb(46, 46, 211);
+}
+#footer #coder p{
+    color: var(--white);
+    margin-left: 4px;
+}
  .request:hover{
     cursor: pointer;
     font-size: 18px;
@@ -74,6 +104,12 @@ ul{
 }
 #request:hover{
     filter: opacity(78%);
+}
+#lists ul li a{
+    font-family: var(--font-family);
+    font-style: normal;
+    color: var(--grayish-blue);
+    font-weight: var(--font-weight-large);
 }
 @media(min-width:1024.1px){
     #all-header{
@@ -98,7 +134,6 @@ ul{
     }
     #lists ul li{
         padding: 10px;
-        font-family: "Barlow", sans-serif;
         position: relative;
         align-items: center;
     }
@@ -113,72 +148,28 @@ ul{
         display: flex;
         align-items: center;
     }
-    #github{
-        align-items: center;
-        display: flex;
-        justify-content: center;
-
-    }
-    #github i{
-        color: black;
-        font-style: italic;
-        font-size: 17px;
-        font-weight: 700;
-    }
-    #pro{
-        display: flex;
-        align-items: center;
-    }
     #pro a{
         color: black;
-        font-family: "Barlow", sans-serif;
-        font-style: italic;
         font-weight: 700;
         font-size: 17px;
         display: flex;
         align-items: center;
-        text-transform: uppercase;
-        -moz-box-align: center;
-    }
-    #pro span{
-        margin-left: 0.5rem;
-        font-style: initial;
-    }
-    .pro{
-        font-family: "Heebo", sans-serif;
-        background-color: rgb(62, 84, 163);
-        color: white;
-        padding: 4px 8px 4px 10px;
-        font-size: 12px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: inline-flex;
-        justify-content: center;
-        -moz-box-align: center;
-        -moz-box-pack: center;
     }
     #challenges a{
         align-items: center;
         color: black;
-        font-family: "Heebo", sans-serif;
-        font-style: italic;
         font-weight: 700;
         font-size: 16px;
     }
     #solutions a{
         align-items: center;
         color: black;
-        font-family: "Heebo", sans-serif;
-        font-style: italic;
         font-weight: 700;
         font-size: 16px;
     }
     #resources a{
         align-items: center;
         color: black;
-        font-family: "Heebo", sans-serif;
-        font-style: italic;
         font-weight: 700;
         font-size: 16px;
     }
@@ -240,6 +231,7 @@ ul{
     }
     #header #desktop .intro-text .request{
         background: linear-gradient(
+            to right,
             var(--lime-green),
             var(--bright-cyan)
         );
@@ -373,15 +365,6 @@ ul{
     #footer #groups #group4 p{
         color: var(--grayish-blue);
     }
-    #footer #coder{
-        text-align: center;
-        padding-bottom: 30px;
-        font-size: var(--font-family);
-        color: var(--white);
-    }
-    #footer #coder a{
-        color: var(--white);
-    }
 }
 @media(max-width:1024px){
     *{
@@ -393,25 +376,38 @@ ul{
     #request{
         display: none;
     }
+    #all-header #lists{
+        margin-left: 260px;
+        height: 500px;
+    }
+    #all-header .tops{
+        background-color: var(--white);
+        display: flex;
+        align-items: center;
+        height: 80px;
+        border-bottom: 1px solid var(--dark-blue);
+    }
+    #all-header #lists ul li{
+        border-bottom: none;
+        text-align: center;
+        padding:20px 10px 20px 10px;
+    }
     #all-header{
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgb(219, 229, 230);
         width: 100%;
         position: fixed;
-        background-color: white;
-        overflow: hidden;
-    }
-    #all-header #lists{
-        width: 100%;
+        background-color: transparent;
     }
     #all-header #lists ul{
-        position: relative;
-        display: flex;
         flex-direction: column;
-        top: 35px;
-        background-color: rgb(245, 245, 245);
-        z-index: 10;
-        width: 100%;
+        background-color: var(--white);
+        margin-top: 20px;
+        display: flex;
+        max-width: 1000px;
+        width: 70%;
+        justify-content:space-around;
+        overflow-y: hidden;
+        border-radius: 10px solid var(--bright-cyan);
+        filter: drop-shadow(9px 8px 18px gray);
     }
     .lists{
         position: relative;
@@ -425,27 +421,28 @@ ul{
     }
     #navigations .fa-bars{
         position: absolute;
-        top:0px;
+        top:20px;
         right: 30px;
         font-size: 40px;
-        padding:2px 12px;
+        color: var(--grayish-blue);
+        font-weight: var(--font-weight-small);
     }
     #navigations .fa-times{
         position: absolute;
-        top:0px;
+        top:20px;
         right: 30px;
         font-size: 40px;
-        padding:2px 12px;
         display: none;
+        color: var(--grayish-blue);
+        font-weight: var(--font-weight-small);
     }
     #navigations a{
         position: absolute;
-        top:10px;
+        top:24px;
         right:100px ;
         font-size: 18px;
         color: black;
         text-transform: uppercase;
-        font-family: "Heebo", sans-serif;
         line-height: 1.5;
         font-weight: 700;
         text-decoration: none;
@@ -453,19 +450,8 @@ ul{
     #navigations a:active{
         text-decoration: underline;
     }
-    .fa-github{
-        position: relative;
-        top:4px;
-        width: 20px;
-        color:black;
-        margin-left: 10px;
-    }
     ul{
         list-style: none;
-    }
-    #github{
-        padding: 1.5rem 0px;
-        border-bottom: 1px solid rgb(219, 229, 230);
     }
     #github a{
         margin-left: 25px;
@@ -473,76 +459,34 @@ ul{
         color: black;
         font-size: 17px;
         font-weight: 700;
-        font-style: italic;
         line-height: 1.5;
-        font-family: "Barlow", sans-serif;
-    }
-    #pro{
-        border-bottom: 1px solid rgb(219, 229, 230);
     }
     #pro a{
-        display: flex;
-        align-items: center;
-        -moz-box-align: center;
         text-decoration: none;
         color: black;
         margin-left: 25px;
-        padding: 1.5rem 0px;
         font-size: 18px;
-        font-family: "Barlow", sans-serif;
-        font-style: italic;
-        text-transform: uppercase;
         font-weight: 700;
-    }
-    .pro{
-        display: flex;
-        margin-left: 0.5rem;
-        font-style: initial;
-        background-color: rgb(62, 84, 163);
-        color: white;
-        font-size: 13px;
-        line-height: 1;
-        padding: 4px 8px 4px 11px;
-        font-family: "Heebo", sans-serif;
-        letter-spacing: 2px;
-    }
-    #challenges{
-        padding: 1.5rem 0px;
-        border-bottom: 1px solid rgb(219, 229, 230);
     }
     #challenges a{
         text-decoration: none;
         color: #000;
         margin-left: 25px;
         font-weight: 700;
-        font-style: italic;
-        font-family: "Heebo", sans-serif;
         font-size: 18px;
-    }
-    #solutions{
-        padding: 1.5rem 0px;
-        border-bottom: 1px solid rgb(219, 229, 230);
     }
     #solutions a{
         text-decoration: none;
         color: #000;
         margin-left: 25px;
         font-weight: 700;
-        font-style: italic;
-        font-family: "Heebo", sans-serif;
         font-size: 18px;
-    }
-    #resources{
-        padding: 1.5rem 0px;
-        border-bottom: 1px solid rgb(219, 229, 230);
     }
     #resources a{
         text-decoration: none;
         color: #000;
         margin-left: 25px;
         font-weight: 700;
-        font-style: italic;
-        font-family: "Heebo", sans-serif;
         font-size: 18px;
     }
     .listToggle{
@@ -647,6 +591,12 @@ ul{
         border-radius: 30px;
         font-size: 25px;
     }
+    #section2 #articles #article4 img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
     #section2 #articles #article4 p{
         width: 600px;
         font-size: 25px;
@@ -726,7 +676,7 @@ ul{
         border-radius: 50px;
         margin-bottom: 20px;
     }
-    #footer #groups #group4,#coder p{
+    #footer #groups #group4 p{
         color: var(--grayish-blue);
         padding-bottom: 25px;
     }
@@ -764,19 +714,28 @@ ul{
     }
     #navigations .fa-bars{
         position: absolute;
-        top:4px;
+        top:30px;
         right:10px;
         font-size: 25px;
-        padding:2px 12px;
+        color: var(--grayish-blue);
+        font-weight: var(--font-weight-small);
+    }
+    #navigations .fa-times{
+        position: absolute;
+        top:30px;
+        right:10px;
+        display: none;
+        font-size: 25px;
+        color: var(--grayish-blue);
+        font-weight: var(--font-weight-small);
     }
     #navigations a{
         position: absolute;
-        top:10px;
+        top:30px;
         right:-60px ;
         font-size: 12px;
         color: black;
         text-transform: uppercase;
-        font-family: "Heebo", sans-serif;
         line-height: 1.5;
         font-weight: 700;
         text-decoration: none;
@@ -819,6 +778,51 @@ ul{
     #section2 #articles header #author,#unique{
         padding-left: 20px;
     }
+    #all-header{
+        width: 100%;
+        position: fixed;
+        background-color: transparent;
+    }
+    #all-header #lists ul{
+        flex-direction: column;
+        background-color: var(--white);
+        margin-top: 20px;
+        display: flex;
+        max-width: 1000px;
+        width: 80%;
+        justify-content:space-around;
+        overflow-y: hidden;
+        border-radius: 10px;
+    }
+    #all-header #lists{
+        margin-left: 140px;
+        height: 500px;
+    }
+}
+@media(max-width:560px){
+    #all-header .tops{
+        background-color: var(--white);
+    }
+    #all-header{
+        width: 100%;
+        position: fixed;
+        background-color: transparent;
+    }
+    #all-header #lists ul{
+        flex-direction: column;
+        background-color: var(--white);
+        margin-top: 20px;
+        display: flex;
+        max-width: 700px;
+        width: 80%;
+        justify-content:space-around;
+        overflow-y: hidden;
+        border-radius: 10px;
+    }
+    #all-header #lists{
+        margin-left: 100px;
+        height: 500px;
+    }
 }
 @media(max-width:420px){
     #header #desktop .intro-img{
@@ -847,8 +851,27 @@ ul{
     }
     #section #easy-sections div p{
         width: 350px;
+        font-size: 16px;
     }
-    #section2 #articles  p{
+
+    #section2 #articles #article1  p{
+        display: flex;
+        width: 240px;
+        overflow-x: hidden;
+        font-size: 14px;
+    }
+    #section2 #articles #article3  a,#section2 #articles #article1  a, #section2 #articles #article4  a, #section2 #articles #article2  a{
+        font-size: 16px;
+        justify-content: space-around;
+        text-align: center;
+    }
+    #section2 #articles #article3  p{
+        display: flex;
+        width: 240px;
+        overflow-x: hidden;
+        font-size: 14px;
+    }
+    #section2 #articles #article2  p{
         display: flex;
         width: 240px;
         overflow-x: hidden;
@@ -863,9 +886,49 @@ ul{
     #section2 #articles img{
         width: 300px;
     } 
-
+    #footer #coder{
+        display: flex;
+        justify-content: center;
+    }
+    #footer #coder{
+        padding-bottom: 40px;
+        font-size: 10px;
+    }
+    #footer #coder a{
+        color: rgb(46, 46, 211);
+    }
+    #footer #coder p{
+        color: var(--white);
+    }
+    #all-header{
+        width: 100%;
+        position: fixed;
+        background-color: transparent;
+    }
+    #all-header #lists ul{
+        flex-direction: column;
+        background-color: var(--white);
+        margin-top: 20px;
+        display: flex;
+        max-width: 700px;
+        width: 80%;
+        justify-content:space-around;
+        overflow-y: hidden;
+        border-radius: 10px;
+    }
+    #all-header #lists{
+        margin-left: 70px;
+        height: 300px;
+    }
+    #all-header #lists ul li a{
+        font-size: 15px;
+        padding-top: 2px;
+    }
+    #all-header #lists ul li{
+        padding: 8px;
+    }
 }
-@media(max-width:300px){
+@media(max-width:360px){
     #header #desktop .intro-text p{
         padding-bottom: 30px;
         width: 240px;
@@ -878,5 +941,56 @@ ul{
     }
     #section2 #articles #article4  p{
         width: 180px;
+    }
+    #header #desktop .intro-text h1{
+        width: 230px;
+        font-size: 25px;
+    }
+    #all-header{
+        background-color: transparent;
+        border-bottom: none;
+    }
+    #all-header .tops{
+        background-color: var(--white);
+    }
+    #all-header #lists{
+        justify-items: center;
+        margin-left: 70px;
+        height: 300px;
+    }
+    #all-header #lists ul{
+        background-color: var(--white);
+        margin-top: 20px;
+        display: flex;
+        max-width: 500px;
+        width: 80%;
+        justify-content:space-around;
+        overflow-y: hidden;
+        border-radius: 10px;
+    }
+    #all-header #lists ul li{
+        border-bottom: none;
+        text-align: center;
+        padding:10px;
+    }
+    #all-header #lists ul li a{
+        font-size: 14px;
+        padding-top: 2px;
+    }
+}
+@media(max-width:280px){
+    #all-header #lists{
+        justify-items: center;
+        margin-left: 60px;
+        height: 200px;
+    }
+    #all-header #lists ul li{
+        border-bottom: none;
+        text-align: center;
+        padding:4px;
+    }
+    #all-header #lists ul li a{
+        font-size: 10px;
+        padding-top: 5px;
     }
 }
