@@ -149,6 +149,9 @@ nav h3{
         position: relative;
         right: -35px;
     }
+    .country-wrapper{
+        margin-top: 4rem;
+    }
 }
 @media(min-width:760px){
     .country-wrapper{
