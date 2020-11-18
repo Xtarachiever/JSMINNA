@@ -44,7 +44,11 @@ img{
     align-self: center;
     height: 27rem;
     overflow-y: hidden;
+<<<<<<< HEAD
     margin-bottom: 0;
+=======
+    margin-
+>>>>>>> bbd599702353539f4ccfb6341e100cc9e35510b4
 }
 .country-information h4{
     font-size: 1.5rem;
@@ -162,7 +166,7 @@ nav h3{
         justify-content: center;
         align-items: center;
     }
-    .country-information{
+     .country-information{
         margin: 1rem;
         margin-bottom: 0;
     }
