@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 10px;
+    background-color: var(--text-color-dark);
+    color: white;
+    width: 100%;
+}
+img{
+    width: 100%;
+}
+:root{
+    --text-color-dark: hsl(227, 18%, 20%);
+}
+.eachContainer{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+.eachContainer{
+    text-align: center;
+    padding-top: 3rem;
+}
+.eachCountry .countryFlag img{
+    width: 18rem;
+}
+.eachCountry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    justify-content: center;
+}
+.countryDetails{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+#countries{
+    height: 3rem;
+    outline: none;
+    margin-bottom: 2rem;
+    width: 15rem;
+}
+.countryDetails p{
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    width: 80%;
+}
+a{
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.back{
+    background-color: white;
+    margin-left: 2rem;
+    width: 7rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+@media(min-width:760px){
+    .eachCountry .countryFlag img{
+        width: 24rem;
+    }
+    .countryDetails p{
+        font-size: 3rem;
+    }
+    .countryDetails #countries{
+        font-size: 2rem;
+        width: 30rem;
+        height: 5rem;
+    }
+    .eachContainer{
+        font-size: 3rem;
+    }
+    .eachCountry .countryFlag img{
+        width: 40rem;
+    }
+}

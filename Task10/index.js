@@ -1,11 +1,14 @@
+const allFunctions=()=>{
 const lightToggle=document.querySelector('i');
 const body=document.querySelector('body');
 const navBar=document.querySelector('nav')
 const input=document.querySelector('input');
 const cards=document.querySelector('.country-information')
 const filter=document.querySelector('.region')
-
-const allFunctions=()=>{
+const section=document.getElementById('countries')
+const sections=section.getElementsByTagName('div')
+const sesh=section.getElementsByClassName('country-information')
+console.log(sesh)
     const toGgle=()=>{
         lightToggle.addEventListener('click',()=>{
             body.classList.toggle('light-mode');
@@ -18,7 +21,6 @@ const allFunctions=()=>{
             }
         })
     }
-    console.log(lightToggle.innerText)
     toGgle();
     const addCommas=(numberCount)=>{
         if(!Number.isInteger(numberCount)){
@@ -68,7 +70,6 @@ const allFunctions=()=>{
         `;
         countriesContainer.appendChild(country_info);
     }
-
     //RegionSelector and Filtering based on picks
     const regionPickList=document.getElementById('regions');
     const regionListHolder=(region)=>{
@@ -88,6 +89,10 @@ const allFunctions=()=>{
         const uniqueRegionPicker=Array.from(new Set(regionSorterTemplate));
         return uniqueRegionPicker.sort();
     }
+    //Redirecting to the single page
+    section.addEventListener('click',()=>{
+        location.replace('indexb.html')
+    })
     //Filtering based on the pick of the users
     const filteringRegions=(countriesList,eachCountryList)=>{
         const filteredRegion=countriesList.filter((({region})=>dataUnset(region)===eachCountryList));
@@ -131,6 +136,9 @@ const allFunctions=()=>{
             countriesData= await response.json();
             generateCountriesList (countriesData);
             regionTemplate(regionSorter(countriesData));
+            // for(var i=0;i<countriesData.length;i++){
+            //     console.log(countriesData[i].name)
+            // }
         }
         catch{
             alert("Something went wrong, please try again later")

@@ -17,6 +17,7 @@ body{
     --text-color-richer: hsl(210, 32%, 50%);
     --text-color-highlight: hsl(25, 70%, 45%);
 }
+
 img{
     width: 100%;
 }
@@ -41,9 +42,9 @@ img{
     display: flex;
     flex-direction: column;
     align-self: center;
-    margin: 2rem 0;
     height: 27rem;
     overflow-y: hidden;
+    margin-bottom: 0;
 }
 .country-information h4{
     font-size: 1.5rem;
@@ -163,6 +164,7 @@ nav h3{
     }
     .country-information{
         margin: 1rem;
+        margin-bottom: 0;
     }
     input,select{
         width: 20rem;
