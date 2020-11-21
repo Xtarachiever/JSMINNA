@@ -61,9 +61,9 @@ const allFunctions=()=>{
         numberStores.classList.add('numberStores')
             numberStores.innerHTML+=`
             <div class="numberStores">
-               <a href=${number}>${name}
+               <a href="tel:${number}">${name}
                </a>  
-               <a href=${number}>
+               <a href="tel:${number}">
                <i class="fa fa-phone fa-2x"></i>
                </a>  
             </div>
