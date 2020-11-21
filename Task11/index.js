@@ -61,9 +61,9 @@ const allFunctions=()=>{
         numberStores.classList.add('numberStores')
             numberStores.innerHTML+=`
             <div class="numberStores">
-               <a href="${number}">${name}
+               <a href=${number}>${name}
                </a>  
-               <a href="${number}">
+               <a href=${number}>
                <i class="fa fa-phone fa-2x"></i>
                </a>  
             </div>
@@ -116,6 +116,7 @@ const allFunctions=()=>{
         catch{
             alert("Sorry, an error occurred while fetching the data")
         }
+        // console.log(numberData)
     }
     fetching();
 }
