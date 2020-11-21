@@ -1,0 +1,190 @@
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    background-color: #6b7b8c;
+    font-family: var(--font-family);
+}
+.emergency{
+    position: fixed;
+    background-color: #1e3d59;
+    width: 100%;
+    top: 0;
+    height: 7rem;
+    display: flex;
+    z-index: 10;
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: #fe3d59;
+    color: white;
+    cursor: pointer;
+    padding: 3rem;
+    border-radius: 4px;
+  }
+  
+#myBtn:hover {
+    background-color: #555;
+}
+h2{
+    color: #a3acb6;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    position: relative;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%);
+    align-items: center;
+}
+:root{
+    --font-family: 'Raleway',sans-serif;
+}
+a{
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+.headers{
+    display: flex;    
+    justify-content: space-around;
+    height: 6rem;
+}
+input,select{
+    width: 16rem;
+    outline: none;
+    padding-left: 1.5rem;
+    font-size: 1.4rem;
+    color: rgb(56, 55, 55);
+    background-color: #f5f0e1;
+    border: 2px solid #fe3d59;
+}
+select{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+::placeholder{
+    font-size: 1.5rem;
+}
+.numberContainers{
+    display: flex;
+    align-self: center;
+    margin-top: 3rem;
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.numberStores{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.7rem;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+.numberContainers a{
+    color: #f5f0e1;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: -1.5rem;
+}
+.fa-phone{
+    transform: rotate(-90deg);
+    color: #fe3d59;
+    width: 3rem;
+    z-index: 2;
+}
+.fa-phone:hover{
+    color: greenyellow;
+    animation: ring 4s .7s ease-in-out infinite;
+}
+@keyframes ring{
+    0% { transform: rotate(10deg); }
+    5% { transform: rotate(30deg); }
+    10% { transform: rotate(-28deg); }
+    15% { transform: rotate(34deg); }
+    20% { transform: rotate(-32deg); }
+    25% { transform: rotate(30deg); }
+    30% { transform: rotate(-28deg); }
+    35% { transform: rotate(26deg); }
+    40% { transform: rotate(-24deg); }
+    45% { transform: rotate(22deg); }
+    50% { transform: rotate(-20deg); }
+    55% { transform: rotate(18deg); }
+    60% { transform: rotate(-16deg); }
+    65% { transform: rotate(14deg); }
+    70% { transform: rotate(-12deg); }
+    75% { transform: rotate(10deg); }
+    80% { transform: rotate(-8deg); }
+    85% { transform: rotate(6deg); }
+    90% { transform: rotate(-4deg); }
+    95% { transform: rotate(2deg); }
+    100% { transform: rotate(-1deg); }
+}
+@media(max-width:780px){
+    #myBtn{
+        padding: 1rem;
+    }
+    input,select{
+        width: 15rem;
+        outline: none;
+        padding-left: 1.3rem;
+        font-size: 1.4rem;
+    }
+    .emergency h2{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .headers{
+        margin-top: -2rem;
+    }
+}
+@media(max-width:600px){
+    .numberStores{
+        display: flex;
+        flex-direction: row;
+    }
+    .headers{
+        height: 4rem;
+    }
+    .fa-phone{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .numberStores a{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:420px){
+    .emergency{
+        height: 7rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .container{
+        margin-top: 10rem;
+    }
+    input{
+        width: 15rem;
+        outline: none;
+        padding-left: 1.3rem;
+        font-size: 1.4rem;
+        height: 3.5rem;
+    }
+    select{
+        display: none;
+    }
+}

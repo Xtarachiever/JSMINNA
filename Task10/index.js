@@ -90,7 +90,7 @@ console.log(sesh)
         return uniqueRegionPicker.sort();
     }
     //Redirecting to the single page
-    section.addEventListener('click',()=>{
+    section.addEventListener('click',(event)=>{
         location.replace('indexb.html')
     })
     //Filtering based on the pick of the users
@@ -136,13 +136,11 @@ console.log(sesh)
             countriesData= await response.json();
             generateCountriesList (countriesData);
             regionTemplate(regionSorter(countriesData));
-            // for(var i=0;i<countriesData.length;i++){
-            //     console.log(countriesData[i].name)
-            // }
         }
         catch{
             alert("Something went wrong, please try again later")
         }
+        // console.log(countriesData.filter(({region})=>dataUnset(region)))
     }
     fetchCountriesData();
 }

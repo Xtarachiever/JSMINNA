@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+    <link href="index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="emergency">
+        <h2>Emergency Call Numbers</h2>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div class="container">
+        <div class="headers" id="headers">
+            <input class="input" type="text" placeholder="Search city"/>
+            <select id="select">
+                <option value="" disabled selected>Check all options</option>
+                <option value="all">All</option>
+            </select>
+        </div>
+        <div class="numberContainers" id="numberContainers">
+            <img src="Infinity-1s-200px.svg" class="loader" alt="loader"/>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
