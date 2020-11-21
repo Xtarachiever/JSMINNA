@@ -166,6 +166,9 @@ select{
     .numberStores a{
         font-size: 1.4rem;
     }
+    input,select{
+        width: 10rem;
+    }
 }
 @media(max-width:420px){
     .emergency{

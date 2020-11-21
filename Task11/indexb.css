@@ -157,11 +157,14 @@ button{
         margin-top: 5rem;
     }
     .numberStores{
-        display: block;
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+        align-items: center;
     }
     .numberStores a{
         text-decoration: none;
-        font-size: 2.4rem;
+        font-size: 2rem;
         color: #6b7b8c;
         text-transform: uppercase;
     }
