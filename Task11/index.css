@@ -109,6 +109,12 @@ select{
     color: greenyellow;
     animation: ring 4s .7s ease-in-out infinite;
 }
+.numberContainers img{
+    width: 20rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
 @keyframes ring{
     0% { transform: rotate(10deg); }
     5% { transform: rotate(30deg); }
@@ -133,6 +139,9 @@ select{
     100% { transform: rotate(-1deg); }
 }
 @media(max-width:780px){
+.numberContainers img{
+    width: 12rem;
+}
     #myBtn{
         padding: 1rem;
     }
