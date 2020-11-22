@@ -27,7 +27,7 @@ body{
     background-color: #fe3d59;
     color: white;
     cursor: pointer;
-    padding: 3rem;
+    padding:1rem 1.6rem;
     border-radius: 4px;
   }
   
@@ -113,7 +113,8 @@ select{
     width: 20rem;
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
+    top: 0;
 }
 @keyframes ring{
     0% { transform: rotate(10deg); }
@@ -140,7 +141,10 @@ select{
 }
 @media(max-width:780px){
 .numberContainers img{
-    width: 12rem;
+    width: 10rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
     #myBtn{
         padding: 1rem;
@@ -157,6 +161,9 @@ select{
     }
     .headers{
         margin-top: -2rem;
+    }
+    .numberStores a{
+        font-size: 1.4rem;
     }
 }
 @media(max-width:600px){
