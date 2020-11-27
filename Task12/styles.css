@@ -152,7 +152,7 @@ button .fa-chevron-circle-down{
     }
     .header button{
         display: flex;
-        align-self: end;
+        align-self: flex-end;
         justify-content: space-around;
     }
     .header button span{
@@ -189,35 +189,46 @@ button .fa-chevron-circle-down{
     .heading{
         display: flex;
     }
+    .heading p{
+        font-size: 2rem;
+    }
     .heading h4{
         max-width: 800px;
         min-width: 500px;
         width: 100%;
+        font-size: 2rem;
     }
     .header{
-        height: 250px;
+        height: 420px;
         display: flex;
     }
     .header #time_region{
-        height: 200px;
+        height: 380px;
         margin-left: 1rem;
+        justify-content: space-around;
+    }
+    .header #time_region p{
+        font-size: 2.2rem;
     }
     .header #time_region .sun{
-        font-size: 2.7rem;
+        font-size: 3rem;
         min-width: 300px;
         max-width: 400px;
         width: 80%;
     }
     .header #time_region .sun p{
-        font-size: 2.4rem;
+        font-size: 3rem;
     }
     .header button{
         display: flex;
-        align-self: end;
+        align-self: flex-end;
         justify-content: space-around;
+        height: 6rem;
+        width: 12rem;
+        font-size: 2.2rem;
     }
     .header button span{
-        font-size: 1.5rem;
+        font-size: 2.8rem;
     }
     .section{
         display: none;
