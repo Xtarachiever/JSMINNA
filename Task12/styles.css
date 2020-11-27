@@ -1,0 +1,240 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-image: url('./Images/jeremy-bishop-dvACrXUExLs-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:95vh;
+}
+.nightView{
+    background-image: url('./Images/ryan-hutton-Jztmx9yqjBw-unsplash.jpg');
+    background-size: cover;
+    height:110vh;
+    color: white;
+}
+.heading{
+    display: none;
+    margin: 2rem 2rem;
+    flex-direction: column;
+    width:80%;
+}
+.heading h4{
+    width: 70%;
+    display: flex;
+    align-self: flex-start;
+    font-size: 1.6rem;
+}
+.heading p{
+    font-size: 1.4rem;
+    margin-top: 1.7rem;
+}
+.header{
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+.header button{
+    display: flex;
+    margin-right: 2rem;
+    width: 6rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 26px;
+    cursor: pointer;
+    align-self: flex-start;
+    outline: none;
+}
+#time_region{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#time_region p{
+    font-size: 1.3rem;
+}
+#time_region #clock{
+    font-size: 6rem;
+}
+img{
+    background-size: cover;
+    width: 100%;
+}
+#day_year,#day_week,#week_number,#timezone{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+button .fa-chevron-circle-down{
+    display: none;
+}
+.section{
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    display: none;
+    min-height: 50vh;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    background-color:rgb(119, 112, 112);
+}
+.sectionColorNight{
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+}
+.sectionColorNight p{
+    color: white;
+}
+.section p{
+    color: white
+}
+.sun{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 180px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+.sun .fa-moon-o{
+    display: none;
+}
+#time_region .sun{
+    font-size: 3rem;
+    width: 300px;
+}
+#time_region .sun p{
+    font-size: 2.5rem;
+}
+.sectionToggler{
+    display: flex;
+}
+@media(max-width:899.9px) and (min-width:600px){
+    .section span{
+        font-size: 2.1rem;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+    }
+    .heading{
+        display: flex;
+        min-width: 300px;
+        width: 80%;
+    }
+    #time_region .sun{
+        width:300px;
+        font-size: 3rem;
+    }
+    #time_region .sun p{
+        font-size: 2.2rem;
+    }
+    .nightView{
+        height: 120vh;
+    }
+    .header{
+        height: 320px;
+    }
+    #time_region{
+        height: 280px;
+    }
+    .header button{
+        display: flex;
+        align-self: flex-end;
+    }
+    .section{
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        margin-bottom: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #day_year,#day_week,#week_number,#timezone{
+        display: flex;
+        flex-direction: column;
+        height: 60px;
+        width: 200px;
+    }
+    .sectionToggler{
+        display: flex;
+    }
+}
+@media(min-width:900px){
+    .heading{
+        display: flex;
+    }
+    .nightView{
+        height: 160vh;
+    }
+    .header button{
+        align-self: flex-end;
+        display: flex;
+        width: 10rem;
+        height: 4rem;
+        border-radius: 50px;
+    }
+    button span{
+        font-size: 2.2rem;
+    }
+    .header{
+        height: 350px;
+    }
+    #time_region{
+        height: 300px;
+    }
+    .fa { transform: scale(2); }
+    .section p{
+        font-size: 2.2rem;
+    }
+    #time_region p{
+        font-size: 2.2rem;
+    }
+    .sun{
+        width: 450px;
+        display: flex;
+        justify-content: space-around;
+        font-size: 2rem;
+    }
+    #time_region .sun{
+        width: 400px;
+    }
+    #time_region .sun p{
+        font-size: 2.7rem;
+    }
+    .section{
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 500px;
+        margin-bottom: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .section p{
+        font-size: 1.3rem;
+    }
+    .section span{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    #day_year,#day_week,#week_number,#timezone{
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+    }
+    .sectionToggler{
+        display: flex;
+    }
+}
