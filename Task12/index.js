@@ -66,6 +66,7 @@ const allFunctions=()=>{
                     moon.style.display='flex'
                     sun.style.display='none'
                     body.classList.add('nightView')
+                    body.classList.remove('dayView')
                     section.classList.add('sectionColorNight')
                 }
                 else{
@@ -73,6 +74,7 @@ const allFunctions=()=>{
                     moon.style.display='none'
                     sun.style.display='flex'
                     body.classList.remove('nightView')
+                    body.classList.add('dayView')
                     section.classList.add('section')
                     section.classList.remove('sectionColorNight')
                 }
