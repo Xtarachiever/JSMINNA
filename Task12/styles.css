@@ -6,20 +6,15 @@
 }
 body{
     color: white;
-    height:100vh;
+    min-height:100vh;
     background-image: url('./Images/jeremy-bishop-dvACrXUExLs-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: stretch;
 }
-/* .dayView{
-    background-image: url('./Images/jeremy-bishop-dvACrXUExLs-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
 .nightView{
     background-image: url('./Images/ryan-hutton-Jztmx9yqjBw-unsplash.jpg');
     background-size: cover;
-    height:110vh;
     color: white;
 }
 .heading{
@@ -92,6 +87,8 @@ button .fa-chevron-circle-down{
     width: 100%;
     display: none;
     min-height: 50vh;
+    position: relative;
+    bottom: 0;
     margin-top: 2rem;
     padding-top: 1rem;
     background-color:rgb(119, 112, 112);
@@ -128,47 +125,38 @@ button .fa-chevron-circle-down{
     display: flex;
 }
 @media only screen and (max-width:899px) and (min-width:600px){
-    .section span{
-        font-size: 2.1rem;
-        display: flex;
-        justify-content: space-between;
-        font-weight: 600;
-    }
     .heading{
         display: flex;
-        min-width: 300px;
-        width: 80%;
     }
-    #time_region .sun{
-        width:300px;
-        font-size: 3rem;
-    }
-    .header button{
-        width: 10rem;
-        height: 4rem;
-    }
-    .header button span{
-        font-size: 2rem;
-    }
-    button .fa{
-        transform: scale(2.2);
-    }
-    #time_region .sun p{
-        font-size: 2.2rem;
-    }
-    .nightView{
-        height: 120vh;
+    .heading h4{
+        max-width: 1000px;
+        min-width: 500px;
+        width: 100%;
     }
     .header{
-        height: 500px;
+        height: 300px;
+        display: flex;
     }
-    #time_region{
-        height: 400px;
-        margin-left: 2rem;
+    .header #time_region{
+        height: 200px;
+        margin-left: 1rem;
+    }
+    .header #time_region .sun{
+        font-size: 2.7rem;
+        min-width: 300px;
+        max-width: 400px;
+        width: 80%;
+    }
+    .header #time_region .sun p{
+        font-size: 2.4rem;
     }
     .header button{
         display: flex;
-        align-self: flex-end;
+        align-self: end;
+        justify-content: space-around;
+    }
+    .header button span{
+        font-size: 1.5rem;
     }
     .section{
         display: none;
@@ -184,8 +172,8 @@ button .fa-chevron-circle-down{
     #day_year,#day_week,#week_number,#timezone{
         display: flex;
         flex-direction: column;
-        height: 100px;
-        width: 260px;
+        height: 80px;
+        width: 230px;
         align-items: center;
     }
     .sectionToggler{
@@ -200,60 +188,42 @@ button .fa-chevron-circle-down{
 @media(min-width:900px){
     .heading{
         display: flex;
-        width: 90%;
-        height: 300px;
-        margin-top: 5rem;
     }
     .heading h4{
+        max-width: 800px;
+        min-width: 500px;
+        width: 100%;
+    }
+    .header{
+        height: 250px;
+        display: flex;
+    }
+    .header #time_region{
+        height: 200px;
+        margin-left: 1rem;
+    }
+    .header #time_region .sun{
+        font-size: 2.7rem;
+        min-width: 300px;
+        max-width: 400px;
+        width: 80%;
+    }
+    .header #time_region .sun p{
         font-size: 2.4rem;
     }
-    .heading p{
-        font-size: 2rem;
-    }
-    .nightView{
-        height: 200vh;
-    }
     .header button{
-        align-self: flex-end;
         display: flex;
-        width: 10rem;
-        height: 4rem;
-        border-radius: 50px;
-    }
-    .header{
-        margin-left: 3rem;
-    }
-    button span{
-        font-size: 2.2rem;
-    }
-    .header{
-        height: 450px;
-        margin-top: -3rem;
-    }
-    #time_region{
-        height: 400px;
-    }
-    .fa { transform: scale(2); }
-    #time_region p{
-        font-size: 2.2rem;
-    }
-    .sun{
-        width: 450px;
-        display: flex;
+        align-self: end;
         justify-content: space-around;
-        font-size: 2rem;
     }
-    #time_region .sun{
-        width: 400px;
-    }
-    #time_region .sun p{
-        font-size: 2.7rem;
+    .header button span{
+        font-size: 1.5rem;
     }
     .section{
         display: none;
         flex-direction: row;
         flex-wrap: wrap;
-        height: 400px;
+        height: 500px;
         margin-bottom: 0;
         justify-content: space-between;
         align-items: center;

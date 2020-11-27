@@ -60,6 +60,7 @@ const allFunctions=()=>{
             const moon=document.querySelector('.fa-moon-o')
             const body=document.querySelector('body')
             const section=document.querySelector('.section')
+            const textChange=document.getElementById('textChange')
             weather.addEventListener('click',()=>{
                 if(weatherP.innerText=='Good Morning'){
                     weatherP.innerText='Good Evening'
@@ -68,6 +69,7 @@ const allFunctions=()=>{
                     body.classList.add('nightView')
                     body.classList.remove('dayView')
                     section.classList.add('sectionColorNight')
+                    textChange.innerText="GOOD EVENING, IT'S CURRENTLY"
                 }
                 else{
                     weatherP.innerText='Good Morning'
@@ -77,6 +79,7 @@ const allFunctions=()=>{
                     body.classList.add('dayView')
                     section.classList.add('section')
                     section.classList.remove('sectionColorNight')
+                    textChange.innerText="GOOD MORNING, IT'S CURRENTLY"
                 }
             })
         }
