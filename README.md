@@ -8,3 +8,5 @@
 [World Data page](https://xtarachiever.github.io/JSMINNA/Task10/index.html)
 
 [Emegency Number](https://xtarachiever.github.io/JSMINNA/Task11/index.html)
+
+[Designed TimeZone](https://xtarachiever.github.io/JSMINNA/Task12/index.html)
