@@ -193,17 +193,17 @@ button .fa-chevron-circle-down{
         font-size: 2rem;
     }
     .heading h4{
-        max-width: 800px;
+        max-width: 1500px;
         min-width: 500px;
         width: 100%;
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
     .header{
-        height: 420px;
+        height: 600px;
         display: flex;
     }
     .header #time_region{
-        height: 380px;
+        height: 500px;
         margin-left: 1rem;
         justify-content: space-around;
     }
