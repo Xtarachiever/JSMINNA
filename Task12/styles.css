@@ -136,6 +136,7 @@ button .fa-chevron-circle-down{
     .header{
         height: 400px;
         display: flex;
+        margin-top: 3rem;
     }
     .header #time_region{
         height: 350px;
@@ -210,9 +211,10 @@ button .fa-chevron-circle-down{
     .header{
         height: 600px;
         display: flex;
+        margin-top: 7rem;
     }
     .header #time_region{
-        height: 500px;
+        height: 460px;
         margin-left: 1rem;
         justify-content: space-around;
     }
