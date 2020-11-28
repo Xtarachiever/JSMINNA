@@ -19,6 +19,21 @@ const allFunctions=()=>{
             day_week.innerHTML=weekInfo
         }
         dayWeek();
+
+        const timeZones=()=>{
+            const hour=new Date().getHours();
+            const body=document.querySelector('body')
+            console.log(hour)
+            if(hour.value<='12'){
+                body.classList.remove('nightView')
+                body.classList.add('dayView')
+            }
+            else{
+                body.classList.add('nightView')
+                body.classList.remove('dayView')
+            }
+        }
+        timeZones()
         // const timeOffSet=()=>{
         //     const timer=new Date().getTimezoneOffset();
         //     console.log(timer)
