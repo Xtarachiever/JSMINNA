@@ -134,18 +134,23 @@ button .fa-chevron-circle-down{
         width: 100%;
     }
     .header{
-        height: 300px;
+        height: 400px;
         display: flex;
     }
     .header #time_region{
-        height: 200px;
+        height: 350px;
         margin-left: 1rem;
+    }
+    .header #time_region p{
+        font-size: 2rem;
+        min-width: 300px;
+        width: 100%;
     }
     .header #time_region .sun{
         font-size: 2.7rem;
-        min-width: 300px;
+        min-width: 350px;
         max-width: 400px;
-        width: 80%;
+        width: 100%;
     }
     .header #time_region .sun p{
         font-size: 2.4rem;
@@ -154,9 +159,13 @@ button .fa-chevron-circle-down{
         display: flex;
         align-self: flex-end;
         justify-content: space-around;
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.5rem;
     }
     .header button span{
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-weight: 600;
     }
     .section{
         display: none;
@@ -209,6 +218,9 @@ button .fa-chevron-circle-down{
     }
     .header #time_region p{
         font-size: 2.2rem;
+    }
+    .header #time_region #clock{
+        font-size: 12rem;
     }
     .header #time_region .sun{
         font-size: 3rem;
