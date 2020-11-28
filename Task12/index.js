@@ -22,15 +22,31 @@ const allFunctions=()=>{
 
         const timeZones=()=>{
             const hour=new Date().getHours();
+            const weatherP=document.querySelector('.sun p')
+            const sun=document.querySelector('.fa-sun-o')
+            const moon=document.querySelector('.fa-moon-o')
+            const section=document.querySelector('.section')
+            const textChange=document.getElementById('textChange')
             const body=document.querySelector('body')
             console.log(hour)
             if(hour.value<='12'){
                 body.classList.remove('nightView')
                 body.classList.add('dayView')
+                weatherP.innerText='Good Morning'
+                moon.style.display='none'
+                sun.style.display='flex'
+                section.classList.add('section')
+                section.classList.remove('sectionColorNight')
+                textChange.innerText="GOOD MORNING, IT'S CURRENTLY"
             }
             else{
                 body.classList.add('nightView')
                 body.classList.remove('dayView')
+                weatherP.innerText='Good Evening'
+                moon.style.display='flex'
+                sun.style.display='none'
+                section.classList.add('sectionColorNight')
+                textChange.innerText="GOOD EVENING, IT'S CURRENTLY"
             }
         }
         timeZones()
