@@ -6,6 +6,7 @@ const allFunctions=()=>{
         const nigeriaTime=()=>{
             var timeInterval=document.getElementById('clock');
             timeInterval.innerHTML=new Date().toLocaleString("en-US",{timeZone:'Africa/Lagos',timeStyle:'short',hourCycle:'h24'});
+            timeInterval.innerHTML+=`<sub>WAT</sub>`
         }
         nigeriaTime();
         setInterval(nigeriaTime,1000)
@@ -29,7 +30,7 @@ const allFunctions=()=>{
             const textChange=document.getElementById('textChange')
             const body=document.querySelector('body')
             console.log(hour)
-            if(hour.value<='12'){
+            if(hour<='12'){
                 body.classList.remove('nightView')
                 body.classList.add('dayView')
                 weatherP.innerText='Good Morning'
@@ -38,6 +39,16 @@ const allFunctions=()=>{
                 section.classList.add('section')
                 section.classList.remove('sectionColorNight')
                 textChange.innerText="GOOD MORNING, IT'S CURRENTLY"
+            }
+            else if(hour>='12' && hour<='17'){
+                body.classList.remove('nightView')
+                body.classList.add('dayView')
+                weatherP.innerText='Good Afternoon'
+                moon.style.display='none'
+                sun.style.display='flex'
+                section.classList.add('section')
+                section.classList.remove('sectionColorNight')
+                textChange.innerText="GOOD AFTERNOON, IT'S CURRENTLY"
             }
             else{
                 body.classList.add('nightView')

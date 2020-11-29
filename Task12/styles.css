@@ -11,6 +11,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     min-height: stretch;
+    font-family: 'inter',sans-serif;
 }
 .nightView{
     background-image: url('./Images/ryan-hutton-Jztmx9yqjBw-unsplash.jpg');
@@ -23,6 +24,9 @@ body{
     flex-direction: column;
     width:80%;
     height: 200px;
+}
+.header #clock sub{
+    font-size: 1.6rem;
 }
 .heading h4{
     width: 80%;
@@ -128,6 +132,9 @@ button .fa-chevron-circle-down{
     .heading{
         display: flex;
     }
+    .header #clock sub{
+        font-size: 2.6rem;
+    }
     .heading h4{
         max-width: 1000px;
         min-width: 500px;
@@ -194,6 +201,9 @@ button .fa-chevron-circle-down{
         display: flex;
         justify-content: center;
     }
+    #time_region #clock{
+        font-size: 10rem;
+    }
 }
 @media(min-width:900px){
     .heading{
@@ -227,7 +237,7 @@ button .fa-chevron-circle-down{
     .header #time_region .sun{
         font-size: 3rem;
         min-width: 300px;
-        max-width: 400px;
+        max-width: 600px;
         width: 80%;
     }
     .header #time_region .sun p{
