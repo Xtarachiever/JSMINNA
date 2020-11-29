@@ -29,7 +29,7 @@ const allFunctions=()=>{
             const textChange=document.getElementById('textChange')
             const body=document.querySelector('body')
             console.log(hour)
-            if(hour.value<='12'){
+            if(hour.value<'16'){
                 body.classList.remove('nightView')
                 body.classList.add('dayView')
                 weatherP.innerText='Good Morning'
