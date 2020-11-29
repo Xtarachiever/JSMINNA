@@ -128,6 +128,9 @@ button .fa-chevron-circle-down{
 .sectionToggler{
     display: flex;
 }
+.header #clock sub{
+    font-size: 2.2rem;
+}
 @media only screen and (max-width:899px) and (min-width:600px){
     .heading{
         display: flex;
