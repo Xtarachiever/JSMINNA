@@ -120,7 +120,7 @@ button .fa-chevron-circle-down{
 }
 #time_region .sun{
     font-size: 2.2rem;
-    width: 200px;
+    width: 250px;
 }
 #time_region .sun p{
     font-size: 1.5rem;
@@ -128,15 +128,12 @@ button .fa-chevron-circle-down{
 .sectionToggler{
     display: flex;
 }
-.header #clock sub{
-    font-size: 2.2rem;
-}
 @media only screen and (max-width:899px) and (min-width:600px){
     .heading{
         display: flex;
     }
     .header #clock sub{
-        font-size: 2.6rem;
+        font-size: 2.7rem;
     }
     .heading h4{
         max-width: 1000px;
@@ -220,6 +217,9 @@ button .fa-chevron-circle-down{
         min-width: 500px;
         width: 100%;
         font-size: 2.4rem;
+    }
+    .header #time_region #clock sub{
+        font-size: 3rem;
     }
     .header{
         height: 600px;
