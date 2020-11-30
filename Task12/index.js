@@ -40,7 +40,7 @@ const allFunctions=()=>{
                 section.classList.remove('sectionColorNight')
                 textChange.innerText="GOOD MORNING, IT'S CURRENTLY"
             }
-            else if(hour>='12' && hour<='17'){
+            else if(hour>='12' && hour<='16'){
                 body.classList.remove('nightView')
                 body.classList.add('dayView')
                 weatherP.innerText='Good Afternoon'
