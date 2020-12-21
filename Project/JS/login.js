@@ -55,7 +55,7 @@ form.addEventListener('submit',(e)=>{
                 window.location.href="suggest.html"
             }
             else{
-                window.location.href="./index.html"
+                window.location.href="index.html"
             }
             var token=data.payload.token;
             const getLocalData=()=>{
