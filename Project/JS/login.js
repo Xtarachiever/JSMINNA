@@ -52,7 +52,7 @@ form.addEventListener('submit',(e)=>{
         .then(function(data){
             console.log(data.success)
             if(data.success==='true'){
-                window.location.href="./suggest.html"
+                window.location.href="/suggest.html"
             }
             var token=data.payload.token;
             const getLocalData=()=>{

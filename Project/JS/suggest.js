@@ -4,11 +4,14 @@ const itemDescription=document.getElementById('itemDescription');
 const itemCategory=document.getElementById('itemCategory');
 const reason=document.getElementById('reason');
 const error=document.querySelector('.error');
-// window.onload=()=>{
-//     if(localStorage.getItem('token', != null){
-        
-//     })
-// }
+window.onload=()=>{
+    if(localStorage.getItem('token') != null){
+        window.location.href='/suggest.html';
+    }
+    else{
+        window.location.href='/index.html';
+    }
+}
 function item(){
     if(itemCategory.value.toLowerCase() === 'electronics'){
         error.textContent='';
