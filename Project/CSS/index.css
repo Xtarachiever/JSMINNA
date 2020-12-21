@@ -26,6 +26,7 @@ body{
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
+    font-size: 1.2rem;
 }
 .all .suggestions div label {
     padding: 12px 12px 12px 0;
@@ -277,10 +278,14 @@ a.active{
         display: table;
         clear: both;
     }
-      .all .suggestions div label{
+      .all .suggestions div label,.all .suggestions div p{
         float: right;
         width: 25%;
         margin-top: 6px;
+        font-size: 1.7rem;
+    }
+    .all .suggestions div.reason p{
+        width: 100%;
     }
       .all .suggestions div input[type=text], select{
         float: left;
