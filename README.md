@@ -10,3 +10,5 @@
 [Emegency Number](https://xtarachiever.github.io/JSMINNA/Task11/index.html)
 
 [Designed TimeZone](https://xtarachiever.github.io/JSMINNA/Task12/index.html)
+
+[Project](https://xtarachiever.github.io/JSMINNA/Project/HTML/index.html)
