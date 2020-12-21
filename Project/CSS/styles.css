@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(178, 231, 245);
+    width: 100%;
+    overflow: hidden;
+}
+.error{
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    height: 600px;
+    justify-content: space-around;
+    width: 80%;
+    background-color: white;
+    box-shadow: -1px -1px 3px rgb(80, 77, 77);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.all .form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    overflow: hidden;
+    width: 70%;
+    min-width: 400px;
+    max-width: 700px;
+}
+.all .form form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
+.all .form form div{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+}
+.all .form form div.number{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.all .form form div.number .phone-number input{
+    width: 80%;
+    min-width: 100px;
+    max-width: 250px;
+}
+.all .form form div.number select{
+    width: 30%;
+    border: none;
+    height: 2.4rem;
+    border: 1px solid rgb(228, 183, 167);
+    display: flex;
+    align-self: flex-end;
+}
+form input{
+    height: 2.4rem;
+    outline: none;
+    width: 80%;
+    min-width: 200px;
+    max-width: 1200px;
+    border: none;
+    border: 1px solid rgb(228, 183, 167);
+    padding-left: 2rem;
+}
+form button{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    background-color: tomato;
+    color: white;
+    border-radius: 20px;
+    box-shadow: -2px 2px 3px rgb(80, 77, 77);
+    cursor: pointer;
+}
+.login{
+    height: 350px;
+    max-width: 800px;
+}
+.login .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 1rem;
+}
+.login .form form div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login .form form div label,.login .form p{
+    font-size: 18px;
+}
+.login .form form button{
+    height: 35px;
+}
+.login .form input{
+    height: 40px;
+    border: none;
+    border: 1px solid rgb(228, 183, 167);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+@media(min-width:760px){
+    .all .form form div{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .all p{
+        font-size: 1.4rem;
+    }
+    .all h2{
+        font-size: 2rem;
+    }
+    .all .form form div label{
+        font-size: 1.5rem;
+    }
+    form input{
+        height: 3rem;
+        outline: none;
+        width: 55%;
+        margin-left: 1rem;
+    }
+    ::placeholder{
+        font-size: 1.2rem;
+    }
+    .all .form form div.number{
+        display: flex;
+        justify-content: space-between;
+    }
+    .all .form form div.number .phone-number{
+        width: 70%;
+        display: flex;
+    }
+    .all .form form div.number select{
+        width: 20%;
+        display: flex;
+        align-self: center;
+    }
+}

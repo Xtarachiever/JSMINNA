@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="../CSS/index.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <div class="nav-bar" onclick="showNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="options" id="options">
+                <a href="#">Home</a>
+                <a href="#" >Services</a>
+                <a href="#">Contact</a>
+                <a href="#" >About</a>
+            </div>
+            <div class="user-img">
+                <img src="../images/Xtarachiever.png"/>
+            </div>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search"/>
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="contents">
+            <h2>Categories</h2>
+            <div id="listed">
+                <a href="#" class="elects active">Electronics</a>
+                <a href="#" class="furn">Furnitures</a>
+                <a href="#" class="groc">Grocery</a>
+            </div>
+            <div class="datas"></div>
+        </div>
+        <div class="footer">
+            <h1>Holla</h1>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+        $("a").click(function(){
+            $(this).addClass("active").siblings().removeClass('active');
+        });
+    });
+    </script>
+    <script src="../JS/index.js"></script>
+</body>
+</html>

@@ -2,7 +2,6 @@ const function2=()=>{
     const eachCountry=document.querySelector('.eachCountry')
     const select=document.getElementById('countries')
     eachCountry.addEventListener('change',(event)=>{
-        // console.log(event.target.value)
         displayEachData(event.target.value)
 })
     let countriesData;

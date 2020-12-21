@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../CSS/index.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="all">
+        <div class="suggestions">
+            <h3>Suggestions</h3>
+            <p>These are the available suggestions, which would you like to keep getting updates on? </p>
+            <div class="pick">
+                <div class="electronics">
+                    <input type="checkbox" name="electronic" id="electronics"/>
+                    <label for="electronics">Electronics</label>
+                </div>
+                <div class="furniture">
+                    <input type="checkbox" name="furniture" id="furniture"/>
+                    <label for="furniture">Furnitures</label>
+                </div>
+                <div class="grocery">
+                    <input type="checkbox" name="grocery" id="grocery"/>
+                    <label for="grocery">Grocery</label>
+                </div>
+            </div>
+            <form id="form" class="suggestForm">
+                <h3>Suggest Items</h3>
+                <div class="itemName">
+                    <label for="itemName">Item Name:</label>
+                    <input type="text" placeholder="Item Name" name="itemName" id="itemName" required/>
+                </div>
+                <div class="itemDescription">
+                    <label for="itemDescription">Item Description:</label>
+                    <input type="text" placeholder="Item Description" name="itemDescription" id="itemDescription" required/>
+                </div>
+                <div class="error"></div>
+                <div class="itemCategory">
+                    <label for="itemCategory">Item Category:</label>
+                    <input type="text" oninput="item()" placeholder="Item Category" name="itemCategory" id="itemCategory" required/>
+                </div>
+                <div class="reason">
+                    <p>Reason for suggesting Item</p>
+                    <textarea name="reason" placeholder="Reason" class="cols" cols="35" id="reason" rows="8" required></textarea>
+                </div>
+                <button type="submit">Submit Suggestion</button>
+            </form>
+        </div>
+    </div>
+    <script src="../JS/suggest.js"></script>
+</body>
+</html>

@@ -136,6 +136,7 @@ console.log(sesh)
             countriesData= await response.json();
             generateCountriesList (countriesData);
             regionTemplate(regionSorter(countriesData));
+            console.log(countriesData)
         }
         catch{
             alert("Something went wrong, please try again later")
