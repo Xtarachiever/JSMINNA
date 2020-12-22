@@ -58,9 +58,10 @@ form.addEventListener('submit',(e)=>{
                 window.location.href="index.html"
             }
             var token=data.payload.token;
+            // localStorage.setItem('token',token)
             const getLocalData=()=>{
                 if(localStorage.getItem("token")===null){
-                    localStorage.setItem("token",JSON.stringify([]));
+                    localStorage.setItem("token",JSON.stringify(""));
                 }
                 else{
                     localStorage.setItem('token',token)
@@ -76,8 +77,4 @@ form.addEventListener('submit',(e)=>{
             return obj;
         }
     }
-    // if(messages.length>0){
-    //     e.preventDefault();
-    //     console.log(messages);
-    // }
 });

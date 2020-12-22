@@ -31,7 +31,7 @@ const allFunctions=()=>{
     navBar.addEventListener('click',()=>{
         items.classList.toggle('toggler');
     });
-    const fetchData=()=>{
+    const fetchData=async ()=>{
         const response='./data.json';
         fetch(response)
         .then((res)=>res.json())
@@ -42,6 +42,9 @@ const allFunctions=()=>{
             //     console.log(item)
             // })
         })
+        // const response= await('https://jsminnastore.herokuapp.com/suggested');
+        // const data = response.json();
+        // console.log(data)
     }
     fetchData();
 }

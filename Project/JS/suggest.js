@@ -4,6 +4,15 @@ const itemDescription=document.getElementById('itemDescription');
 const itemCategory=document.getElementById('itemCategory');
 const reason=document.getElementById('reason');
 const error=document.querySelector('.error');
+
+// window.onload=()=>{
+//     if(localStorage.getItem('token') != null){
+//         self.location.href='./suggest.html';
+//     }
+//     else{
+//         window.location.href='index.html';
+//     }
+// }
 function item(){
     if(itemCategory.value.toLowerCase() === 'electronics'){
         error.textContent='';
@@ -33,7 +42,8 @@ form.addEventListener('submit',(e)=>{
             method:'POST',
             body:JSON.stringify(json),
             headers:{
-                "Content-Type":"application/json; charset=UTF-8"
+                "Content-Type":"application/json; charset=UTF-8",
+                "Authorization":'Bearer' + localStorage.getItem('token')
             }
         })
         .then(function(response){
@@ -41,6 +51,12 @@ form.addEventListener('submit',(e)=>{
         })
         .then(function(data){
             console.log(data)
+            // if(data.success ==='true'){
+            //     window.location.href="suggestions.html"
+            // }
+            // else{
+            //     window.location.href="index.html"
+            // }
         })
         function convertToJson(formData){
             let obj ={};
@@ -49,13 +65,12 @@ form.addEventListener('submit',(e)=>{
             }
             return obj;
         }
+        // console.log(check)
     }
-    window.onload=()=>{
-        if(localStorage.getItem('token') != null){
-            window.location.href='suggest.html';
-        }
-        else{
-            window.location.href='index.html';
-        }
-    }
+    // if(localStorage.getItem('token') != null){
+    //     window.location.href='suggestions.html';
+    // }
+    // else{
+    //     window.location.href='index.html';
+    // }
 });
