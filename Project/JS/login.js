@@ -51,23 +51,14 @@ form.addEventListener('submit',(e)=>{
         })
         .then(function(data){
             console.log(data.success)
+            // localStorage.setItem('token',token)
+            localStorage.setItem('token',data.payload.token)
             if(data.success!=='true'){
                 window.location.href="suggest.html"
             }
             else{
                 window.location.href="index.html"
             }
-            var token=data.payload.token;
-            // localStorage.setItem('token',token)
-            const getLocalData=()=>{
-                if(localStorage.getItem("token")===null){
-                    localStorage.setItem("token",JSON.stringify(""));
-                }
-                else{
-                    localStorage.setItem('token',token)
-                }
-            }
-            getLocalData();
         })
         function convertToJson(formData){
             let obj ={};

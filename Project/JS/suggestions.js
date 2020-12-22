@@ -1,15 +1,12 @@
 const suggestions=document.querySelector('.suggestions');
-// window.onload=()=>{
-//     if(localStorage.getItem('token') != null){
-//         window.location.href='suggestions.html';
-//     }
-//     else{
-//         window.location.href='index.html';
-//     }
-// }
-
 const fetchSuggestions=async () =>{
-    const response=await fetch('https://jsminnastore.herokuapp.com/suggested');
+    const response=await fetch('https://jsminnastore.herokuapp.com/suggested/electronics',{
+        method:'GET',
+        headers:{
+            "Content-Type":"application/json; charset=UTF-8",
+            "Authorization":'Bearer ' + localStorage.getItem('token')
+        }
+    });
     const data=response.json();
     console.log(data)
 }

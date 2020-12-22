@@ -38,12 +38,14 @@ form.addEventListener('submit',(e)=>{
         }
         let json=convertToJson(fd);
         console.log(json)
+        let check=localStorage.getItem('token');
+        console.log(check)
         fetch('https://jsminnastore.herokuapp.com/suggest',{
             method:'POST',
             body:JSON.stringify(json),
             headers:{
                 "Content-Type":"application/json; charset=UTF-8",
-                "Authorization":'Bearer' + localStorage.getItem('token')
+                "Authorization":'Bearer ' + localStorage.getItem('token')
             }
         })
         .then(function(response){
@@ -67,10 +69,10 @@ form.addEventListener('submit',(e)=>{
         }
         // console.log(check)
     }
-    // if(localStorage.getItem('token') != null){
-    //     window.location.href='suggestions.html';
-    // }
-    // else{
-    //     window.location.href='index.html';
-    // }
+    if(localStorage.getItem('token') != null){
+        window.location.href='suggestions.html';
+    }
+    else{
+        window.location.href='index.html';
+    }
 });
