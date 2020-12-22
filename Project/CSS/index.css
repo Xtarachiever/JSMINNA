@@ -75,6 +75,37 @@ body{
     margin: 1rem 0;
 }
 /* End of Suggest HTML */
+/* Suggestions */
+.suggest h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.suggestion {
+    display: flex;
+    margin: .5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.suggestion .suggests{
+    width: 140px;
+    background-color: white;
+    margin: 1rem;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-transform: capitalize;
+    align-items: center;
+    text-align: center;
+}
+.suggestion .suggests .itemName{
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+/* End suggestions */
 .nav-bar{
     cursor: pointer;
     position: relative;
