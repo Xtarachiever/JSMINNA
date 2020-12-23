@@ -76,6 +76,10 @@ body{
 }
 /* End of Suggest HTML */
 /* Suggestions */
+.suggest{
+    width: 100%;
+    overflow-x: hidden;
+}
 .suggest h1{
     display: flex;
     align-items: center;
@@ -87,7 +91,6 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
 }
 .suggestion .suggests{
     width: 140px;

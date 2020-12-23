@@ -13,6 +13,7 @@ const error=document.querySelector('.error');
 //         window.location.href='index.html';
 //     }
 // }
+
 function item(){
     if(itemCategory.value.toLowerCase() === 'electronics'){
         error.textContent='';

@@ -39,6 +39,13 @@ form.addEventListener('submit',(e)=>{
         }
         let json=convertToJson(fd);
         console.log(json)
+        function convertToJson(formData){
+            let obj ={};
+            for(let key of formData.keys()){
+                obj[key]=formData.get(key);
+            }
+            return obj;
+        }
         fetch('https://jsminnastore.herokuapp.com/auth/login/',{
             method:'POST',
             body:JSON.stringify(json),
@@ -53,19 +60,12 @@ form.addEventListener('submit',(e)=>{
             console.log(data.success)
             // localStorage.setItem('token',token)
             localStorage.setItem('token',data.payload.token)
-            if(data.success!=='true'){
+            if(data.success === true){
                 window.location.href="suggest.html"
             }
             else{
                 window.location.href="index.html"
             }
         })
-        function convertToJson(formData){
-            let obj ={};
-            for(let key of formData.keys()){
-                obj[key]=formData.get(key);
-            }
-            return obj;
-        }
     }
 });
