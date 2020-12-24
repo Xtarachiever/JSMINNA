@@ -18,6 +18,7 @@ body{
     margin: 1rem;
     align-items: center;
     width: 100%;
+    z-index: 100;
 }
 /* Suggest HTML */
 .all .suggestions div input[type=text], select, textarea{
@@ -40,6 +41,7 @@ body{
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+
 }
 .all .suggestions{
     border-radius: 5px;
@@ -160,6 +162,10 @@ img{
 .options a{
     color: rgb(107, 106, 106);
 }
+.options a:hover{
+    color: black;
+    border-bottom:3px solid black;
+}
 .toggler{
     display: flex;
     left: 0px;
@@ -217,6 +223,15 @@ img{
     color: rgb(176, 178, 179);
     text-decoration: none;
 }
+.contents .listed{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contents .listed select{
+    width: 80%;
+}
 a.active{
     color: black;
     width: 100px;
@@ -228,6 +243,7 @@ a.active{
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 2rem;
+    text-transform: capitalize;
 }
 .contents .datas section .cards{
     background-color: white;
@@ -253,12 +269,17 @@ a.active{
     align-items: center;
     width: 100%;
 }
-.all .footer{
+.datas p{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 80%;
+}
+/* .all .footer{
     background-color: rgb(248, 250, 250);
     width: 100%;
     position: fixed;
     bottom: 0;
-}
+} */
 @media(min-width:700px){
      .nav-bar{
         display: none;

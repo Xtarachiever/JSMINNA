@@ -41,7 +41,6 @@ const allFunctions=()=>{
             eachData.innerHTML=`
             <div class="cards">
               <div class="heading">
-              <p class="price">$150</p>
               <i class="fa fa-heart"></i></div>
               <p>${itemName}</p>
               <p>${itemCategory}</p>
