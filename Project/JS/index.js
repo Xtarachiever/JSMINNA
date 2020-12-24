@@ -7,6 +7,7 @@ const allFunctions=()=>{
     const all=document.querySelector('.all');
     const furniture=document.querySelector('.furn');
     const categoryPicker=document.getElementById('listed');
+    const input=document.querySelector('input');
     const categoryHolder=(eachCategory)=>{
         const option=document.createElement('option');
         option.value=eachCategory;
@@ -33,7 +34,6 @@ const allFunctions=()=>{
         }
         else{
             filterCategory(allData,e.target.value)
-            // console.log(allData,e.target.value)
         }
     })
     const generatedData=({id,itemName,itemCategory,itemDescription})=>{
@@ -52,9 +52,29 @@ const allFunctions=()=>{
         datas.classList.add('datas');
     }
     const generateSuggestions=(data)=>{
-        for(const country of data){
-            generatedData(country)
+        datas.innerHTML='';
+        for(const datas of data){
+            generatedData(datas)
         };
+    }
+    input.addEventListener('input',()=>{
+        const values=input.value;
+        const datas=searchBox(values,allData);
+        generateSuggestions(datas)
+        // console.log(allData)
+        // console.log(datas)
+    })
+    const searchBox=(value,data)=>{
+        var searchData=[]
+            for(var i=0;i< data.length;i++){
+                var values=value.toLowerCase();
+                var itemCategory=data[i].itemCategory.toLowerCase();
+                // console.log(itemCategory)
+                if(itemCategory.includes(values)){
+                    searchData.push(data[i])
+                }
+            }
+        return searchData;
     }
     const navBar=document.querySelector('.nav-bar');
     const items=document.querySelector('.options');
@@ -63,20 +83,25 @@ const allFunctions=()=>{
     });
     let allData;
     const fetchData=async ()=>{
-        const response=await fetch('https://jsminnastore.herokuapp.com/suggested',{
-            method:'GET',
-            headers:{
-                "Content-Type":"application/json; charset=UTF-8",
-                "Authorization":'Bearer ' + localStorage.getItem('token')
-            }
-        });
-        response.json()
-        .then(dats=>{
-            allData=dats.payload.result;
-            generateSuggestions(allData)
-            categoryTemplate(categorySorter(allData))
-            // console.log(allData)
-        })
+        try{
+            const response=await fetch('https://jsminnastore.herokuapp.com/suggested',{
+                method:'GET',
+                headers:{
+                    "Content-Type":"application/json; charset=UTF-8",
+                    "Authorization":'Bearer ' + localStorage.getItem('token')
+                }
+            });
+            await response.json()
+            .then(dats=>{
+                allData=dats.payload.result;
+                generateSuggestions(allData);
+                categoryTemplate(categorySorter(allData));
+                // console.log(allData)
+            })
+        }
+        catch{
+            alert('Error')
+        }
     }
     fetchData();
 }
