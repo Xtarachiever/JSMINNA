@@ -18,7 +18,7 @@ const allFunctions=()=>{
         }
     }
     const fetchSuggestions=async () =>{
-        const response=await fetch('https://jsminnastore.herokuapp.com/suggested/electronics',{
+        const response=await fetch('https://jsminnastore.herokuapp.com/suggested',{
             method:'GET',
             headers:{
                 "Content-Type":"application/json; charset=UTF-8",

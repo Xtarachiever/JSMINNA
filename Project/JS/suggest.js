@@ -5,14 +5,20 @@ const itemCategory=document.getElementById('itemCategory');
 const reason=document.getElementById('reason');
 const error=document.querySelector('.error');
 
-// window.onload=()=>{
-//     if(localStorage.getItem('token') != null){
-//         self.location.href='./suggest.html';
-//     }
-//     else{
-//         window.location.href='index.html';
-//     }
-// }
+window.onload=()=>{
+    const tokens=localStorage.getItem('token');
+    const tok=atob(tokens.split(".")[1]);
+    console.log(tok);
+    let jsonified=JSON.parse(tok)
+    let jsonied=new Date(jsonified.exp)
+    console.log(jsonied)
+    // if(localStorage.getItem('token') != null){
+    //     self.location.href='./suggest.html';
+    // }
+    // else{
+    //     window.location.href='index.html';
+    // }
+}
 
 function item(){
     if(itemCategory.value.toLowerCase() === 'electronics'){

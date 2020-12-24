@@ -104,6 +104,7 @@ console.log(sesh)
         }
         else{
             filteringRegions(countriesData,event.target.value)
+            console.log(countriesData,event.target.value)
         }
     })
     const generateCountriesList=(countriesList)=>{
